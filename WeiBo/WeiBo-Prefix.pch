@@ -1,0 +1,77 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#define kAppKey @"854696477"
+#define kRedirectURI @"http://biancheng.me"
+#define kAccessToken @"access_token"
+#define kAppSecret @"6a096d77c88fb1c10ef2704976e5c0fd"
+
+
+//notifation
+
+#define kLoginSuccess @"loginSeccess"
+#define kLogout @"logout"
+
+
+//dic key
+
+#define kAccess_token @"access_token"
+#define kExpires_in @"expires_in"
+#define kUid @"uid"
+
+
+//解析微博所使用的关键字常量，也就是新浪服务器返回的数据由JSONKit解析后生成的字典关于微博信息的key值
+static NSString * const kStatusCreateTime = @"created_at";
+static NSString * const kStatusID = @"id";
+static NSString * const kStatusMID = @"mid";
+static NSString * const kStatusText = @"text";
+static NSString * const kStatusSource = @"source";
+static NSString * const kStatusThumbnailPic = @"thumbnail_pic";
+static NSString * const kStatusOriginalPic = @"original_pic";
+static NSString * const kStatusPicUrls = @"pic_urls";
+static NSString * const kStatusRetweetStatus = @"retweeted_status";
+static NSString * const kStatusUserInfo = @"user";
+static NSString * const kStatusRetweetStatusID = @"retweeted_status_id";
+static NSString * const kStatusRepostsCount = @"reposts_count";
+static NSString * const kStatusCommentsCount = @"comments_count";
+static NSString * const kStatusAttitudesCount = @"attitudes_count";
+static NSString * const kstatusFavorited = @"favorited";
+
+//解析微博用户数据所使用的关键字常量，也就是新浪服务器返回的数据由JSONKit解后生成的字典关于用户信息的Key值。
+static NSString * const kUserInfoScreenName = @"screen_name";
+static NSString * const kUserInfoName = @"name";
+static NSString * const kUserAvatarLarge = @"avatar_large";
+static NSString * const kUserAvatarHd = @"avatar_hd";
+static NSString * const kUserID = @"id";
+static NSString * const kUserDescription = @"description";
+static NSString * const kUserVerifiedReson = @"verified_reason";
+static NSString * const kUserFollowersCount = @"followers_count";
+static NSString * const kUserStatusCount = @"statuses_count";
+static NSString * const kUserFriendCount = @"friends_count";
+static NSString * const kUserStatusInfo = @"status";
+static NSString * const kUserStatuses = @"statuses";
+static NSString * const kUserProfileImageURL = @"profile_image_url";
+
+//解析微博评论列表用到的key 值
+
+static NSString * const kCommontCreated_at = @"created_at";	//string	评论创建时间
+static NSString * const kCommontID = @"id";	//int64	评论的ID
+static NSString * const kCommontText = @"text";	//string	评论的内容
+static NSString * const kCommontSource = @"source";	//string	评论的来源
+static NSString * const kCommontUser = @"user";	//object	评论作者的用户信息字段 详细
+static NSString * const kCommontReply_comment = @"reply_comment"; //object 评论来源评论，当本评论属于对另一评论的回复时返回此字段
